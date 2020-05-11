@@ -40,6 +40,13 @@ pm2 start mongod
 pm2 start redis-server
 pm2 start npm --name "meituanApp" -- run start
 ```
-ENJOY
+### 6. parse some data to mongodb
+```
+curl `${your public ip}/geo/parseMenu`
+curl `${your public ip}/geo/parseProvince`
+curl `${your public ip}/geo/parseCity`
+```
+### 7. ENJOY
+
 
 EOF
