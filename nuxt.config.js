@@ -44,10 +44,22 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     ['nuxt-vuex-localstorage',{
       sessionStorage: ['product']
     }]
   ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target: 'http://cp-tools.cn',
+      pathRewrite: {
+        '^/api' : '/'
+      }
+    }
+  },
   /*
   ** Build configuration
   */
