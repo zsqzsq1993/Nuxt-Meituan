@@ -2,7 +2,7 @@ export default {
   dbs: 'mongodb://localhost:27017/meituan',
   redis: {
     get host() {
-      return '127.0.0.1'
+      return 'localhost'
     },
     get port() {
       return 6379
